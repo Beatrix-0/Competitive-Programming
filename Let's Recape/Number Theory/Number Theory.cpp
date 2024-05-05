@@ -509,6 +509,7 @@ int main()
     return 0;
 }
 
+1. https://youtu.be/5eUY1VxvCAs?feature=shared
 
 // Code ( Smallest Prime Factor by Sieve ) (TC -->  log(n) )
 // Range ( 1 - 1e8 )

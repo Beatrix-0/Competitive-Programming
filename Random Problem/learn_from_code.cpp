@@ -5,7 +5,9 @@
 3. https://codeforces.com/problemset/problem/1862/A
 4. https://codeforces.com/contest/1676/problem/D
 5. https://codeforces.com/contest/1692/problem/C
-
+6. https://codeforces.com/contest/1881/problem/C (https://youtu.be/Oj8mBcWQIeM?si=lY5137nPVlUNee6c)
+7. https://leetcode.com/problems/rotate-image/submissions/1203899605/ [ 90 rotation ] ( https://youtu.be/Z0R2u6gd3GU?si=aHDKUGO9_iNUdVe0)
+8. https://codeforces.com/contest/1966/problem/B ( https://youtu.be/9w_8yFxnl4Y?si=BXigOLaRgfAZKnT6)
 
 // Number Theory 
 
@@ -34,10 +36,12 @@
 
 --> deque
 1. https://codeforces.com/contest/1932/problem/C ( https://youtu.be/0RCx_ZTmDHg?feature=shared )
+2. https://codeforces.com/problemset/problem/1889/A
 
-// Bit
+// Bit 
 1. https://codeforces.com/problemset/problem/1869/A (https://shorturl.at/hFMQ3)
 2. https://www.codechef.com/problems/BINPARITY?tab=statement
+3. https://codeforces.com/contest/1957/problem/B ( https://youtu.be/r6I3qKTfsHA?si=ovOUQP1O_JBtRc9D )
 
 //Random 
 1. https://codeforces.com/problemset/problem/1856/B
@@ -77,6 +81,7 @@
 //Sliding Window 
 1. https://codeforces.com/problemset/problem/1690/D
 2. https://codeforces.com/contest/808/problem/B
+3. https://codeforces.com/problemset/problem/1690/D
 
 // Math + Number theory 
 1. https://codeforces.com/problemset/problem/1679/A ( https://youtu.be/yLULFRZRQNM?feature=shared)
@@ -85,6 +90,7 @@
 1. https://codeforces.com/contest/1927/problem/D ( https://youtu.be/BCl1IHHN-zo?feature=shared )
 2. https://codeforces.com/problemset/problem/1850/E ( https://youtu.be/OogIMb3IPyk?feature=shared )
 3. https://codeforces.com/contest/1928/problem/B ( https://youtu.be/UCVqiNBpt8Y?feature=shared )
+4. https://codeforces.com/contest/1873/problem/E ( https://youtu.be/UXwSw6mbtfY?feature=shared )
 
 
 // DFS
@@ -111,6 +117,9 @@
 8. https://codeforces.com/problemset/problem/230/B
 9. https://codeforces.com/contest/762/problem/A
 8. https://codeforces.com/problemset/problem/1203/C
+9. https://codeforces.com/problemset/problem/1051/B
+10. https://codeforces.com/contest/1881/problem/D (https://youtu.be/5eUY1VxvCAs?feature=shared )
+11. https://codeforces.com/contest/1872/problem/D [lcm] (https://youtu.be/QC5aHOfwV6o?si=yyyqGnLI8_mJX1zS)
 
 //Geometry 
 1. https://codeforces.com/contest/1928/problem/A ( https://youtu.be/yDx3D20oSgU?feature=shared )
@@ -123,6 +132,23 @@
 1. https://codeforces.com/contest/1811/problem/C [Greedy] ( https://youtu.be/Fki2dkIuNmo?feature=shared )
 2. https://codeforces.com/contest/1772/problem/C [Greedy] ( https://youtu.be/qYK-7TI5hmU?feature=shared )
 
-// Sliding window 
-1. https://codeforces.com/problemset/problem/1690/D
+// Permutation & Combination 
+1. https://codeforces.com/problemset/problem/1859/C ( https://youtu.be/8GzOCOQQ0GI?si=ZuWxLUX0HzWn2021 )
+
+// Implementation
+1. https://codeforces.com/problemset/problem/1762/B ( https://youtu.be/IK2K3wIsjJg?si=mU4Ob8WkS3UB_FBg )
+2. https://codeforces.com/contest/1955/problem/C ( https://youtu.be/s6yBfjvw6no?si=b5OKcBQ1swX-7tFa)
+3. https://codeforces.com/problemset/problem/1914/D ( https://youtu.be/4dwHob0_Xvs?si=JItkuVpHgSxFO-3l)
+4. https://codeforces.com/problemset/problem/1913/C ( https://youtu.be/EFw6ciCFlac?si=ofF2Zar9tAQGSeX5)
+
+
+// Fun 
+1. https://codeforces.com/problemset/problem/1954/C ( https://youtu.be/SmXIr44XDLA?si=p20zqTcP8CPdLJJq )
+
+// Interactive 
+1. https://codeforces.com/problemset/problem/1425/F
+
+// Prefix Sum  
+1. https://codeforces.com/contest/1915/problem/E ( https://youtu.be/4_w2XOiIyP8?si=IQxxH0CLvOLZv4l1)
+
 
