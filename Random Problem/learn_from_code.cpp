@@ -98,6 +98,8 @@
 
 // 2P 
 1. https://codeforces.com/contest/1843/problem/A
+2. https://codeforces.com/contest/6/problem/C
+3. https://codeforces.com/problemset/problem/1793/C
 
 // Bitwise 
 1. https://codeforces.com/contest/1867/problem/B ( https://youtu.be/EQOzoWvekgc?feature=shared )
@@ -140,15 +142,27 @@
 2. https://codeforces.com/contest/1955/problem/C ( https://youtu.be/s6yBfjvw6no?si=b5OKcBQ1swX-7tFa)
 3. https://codeforces.com/problemset/problem/1914/D ( https://youtu.be/4dwHob0_Xvs?si=JItkuVpHgSxFO-3l)
 4. https://codeforces.com/problemset/problem/1913/C ( https://youtu.be/EFw6ciCFlac?si=ofF2Zar9tAQGSeX5)
-
+5. https://codeforces.com/problemset/problem/1848/B ( https://youtu.be/KwMohDLBq1M?si=E3i9L7IKG5Z1RSJj)
 
 // Fun 
 1. https://codeforces.com/problemset/problem/1954/C ( https://youtu.be/SmXIr44XDLA?si=p20zqTcP8CPdLJJq )
+2. https://codeforces.com/problemset/problem/1790/D ( https://youtu.be/6RMQ4d4hg5c?si=EnasiBj85uGcUL6-)
+3. https://codeforces.com/contest/678/problem/C
 
 // Interactive 
 1. https://codeforces.com/problemset/problem/1425/F
 
 // Prefix Sum  
 1. https://codeforces.com/contest/1915/problem/E ( https://youtu.be/4_w2XOiIyP8?si=IQxxH0CLvOLZv4l1)
+2. https://codeforces.com/contest/1742/problem/E ( https://youtu.be/al_aVxTTQZA?si=ewrDskgQTARWehsF)
 
+
+
+// Observation 
+1. https://codeforces.com/contest/1857/problem/C ( https://youtu.be/cpMRQYJ1BQw?si=u5txY0zPqXEmGMG9)
+2. https://codeforces.com/contest/1832/problem/C ( https://youtu.be/eMvuxW7nySI?si=VBknconU2nF_8UaC )
+3. https://codeforces.com/contest/1734/problem/C
+
+// Hash map  
+1. https://codeforces.com/contest/1692/problem/E ( https://www.geeksforgeeks.org/longest-sub-array-sum-k/)
 
