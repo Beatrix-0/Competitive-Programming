@@ -379,7 +379,7 @@ int main()
     {
         if ( prime[i])
         {
-          for( int j = 2*i ; j < mx ; j += 2*i)
+          for( int j = 2*i ; j < mx ; j += i)
           {
               prime[j] = false ;
           }
@@ -402,6 +402,7 @@ int main()
 
     return 0 ;
 }
+
 
 
 // Code ( by boolean )
