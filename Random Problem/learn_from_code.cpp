@@ -16,7 +16,8 @@
 2. https://atcoder.jp/contests/abc172/tasks/abc172_d
 --> Primality Test
 1. https://www.codechef.com/problems/PRB01?tab=statement
---> Sieve of Eratosthenes
+--> GCD 
+1. https://codeforces.com/problemset/problem/1732/A
 
 
 // STL
@@ -42,6 +43,9 @@
 1. https://codeforces.com/problemset/problem/1869/A (https://shorturl.at/hFMQ3)
 2. https://www.codechef.com/problems/BINPARITY?tab=statement
 3. https://codeforces.com/contest/1957/problem/B ( https://youtu.be/r6I3qKTfsHA?si=ovOUQP1O_JBtRc9D )
+4.https://codeforces.com/contest/1514/problem/B ( https://youtu.be/KHsRbzQ1htM?si=LpSpYdHVttvlsoKJ)
+5. https://codeforces.com/contest/1420/problem/B ( https://youtu.be/Zp0be0LmLs8?feature=shared)
+6. https://leetcode.com/problems/gray-code/description/ (https://youtu.be/Fha1CSxwvGg?si=mKL0_sU94HNQ44eY)
 
 //Random 
 1. https://codeforces.com/problemset/problem/1856/B
@@ -77,6 +81,7 @@
 8. https://codeforces.com/problemset/problem/1726/A ( https://youtu.be/cnRhDcMe3yM?feature=shared )
 9. https://codeforces.com/contest/1409/problem/B ( https://youtu.be/1W1MqfqjfM0?feature=shared )
 10. https://codeforces.com/problemset/problem/1922/C ( https://youtu.be/ZmBxCOE1kVQ?feature=shared) 
+11.https://codeforces.com/contest/1635/problem/C (https://youtu.be/7FEMG-NkPwM?si=uQT-7DtViS82eqYN)
 
 //Sliding Window 
 1. https://codeforces.com/problemset/problem/1690/D
@@ -103,6 +108,7 @@
 
 // Bitwise 
 1. https://codeforces.com/contest/1867/problem/B ( https://youtu.be/EQOzoWvekgc?feature=shared )
+2. https://codeforces.com/contest/1977/problem/B (https://youtu.be/2Yq1frq4KsE?si=Q4REYRWfLU8_rqLX)
 
 // Binary search on answer 
 1. https://codeforces.com/contest/950/problem/B [ BS + Prefix Sum]
@@ -148,6 +154,10 @@
 1. https://codeforces.com/problemset/problem/1954/C ( https://youtu.be/SmXIr44XDLA?si=p20zqTcP8CPdLJJq )
 2. https://codeforces.com/problemset/problem/1790/D ( https://youtu.be/6RMQ4d4hg5c?si=EnasiBj85uGcUL6-)
 3. https://codeforces.com/contest/678/problem/C
+4. https://www.codechef.com/problems/CHANGEXY (https://youtu.be/E-JJHug4go8?si=JeOCjvUzXQ8QjuXn)
+5. https://toph.co/p/genius-needs-help
+6. https://codeforces.com/problemset/problem/1176/C (https://youtu.be/hjFzoToGHng?si=q0o21jRbnyfoTa0c)
+7. https://codeforces.com/problemset/problem/1101/B ( EDU)
 
 // Interactive 
 1. https://codeforces.com/problemset/problem/1425/F
@@ -166,3 +176,6 @@
 // Hash map  
 1. https://codeforces.com/contest/1692/problem/E ( https://www.geeksforgeeks.org/longest-sub-array-sum-k/)
 
+
+// Friday 
+1. https://toph.co/p/caesar-cipher
