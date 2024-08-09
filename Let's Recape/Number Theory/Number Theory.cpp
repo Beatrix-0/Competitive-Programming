@@ -888,6 +888,10 @@ int gcd( int a, int b )
     }
 }
 
+int lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
 
 int main()
 {
@@ -899,7 +903,7 @@ int main()
     cout << "GCD : "<<  ans_gcd << '\n';
 
     // Printing LCM
-    int ans_lcm =  ( a*b / gcd( a ,b ) ) ;
+    int ans_lcm =  ( a , b ) ;
     cout << "LCM : "<<  ans_lcm << '\n';
 
 

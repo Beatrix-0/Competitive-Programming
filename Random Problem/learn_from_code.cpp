@@ -46,7 +46,8 @@
 4.https://codeforces.com/contest/1514/problem/B ( https://youtu.be/KHsRbzQ1htM?si=LpSpYdHVttvlsoKJ)
 5. https://codeforces.com/contest/1420/problem/B ( https://youtu.be/Zp0be0LmLs8?feature=shared)
 6. https://leetcode.com/problems/gray-code/description/ (https://youtu.be/Fha1CSxwvGg?si=mKL0_sU94HNQ44eY)
-
+7. https://www.codechef.com/problems/FIBEASY?tab=statement ( https://youtu.be/3pdlCExbbAs?si=qnklp7BDtmMtno0k)
+8. https://www.codechef.com/problems/MINIAND ( https://discuss.codechef.com/t/miniand-enigma-editorial/49717)
 //Random 
 1. https://codeforces.com/problemset/problem/1856/B
 2. https://www.hackerearth.com/problem/algorithm/monk-and-rotation-3-bcf1aefe/
@@ -158,6 +159,8 @@
 5. https://toph.co/p/genius-needs-help
 6. https://codeforces.com/problemset/problem/1176/C (https://youtu.be/hjFzoToGHng?si=q0o21jRbnyfoTa0c)
 7. https://codeforces.com/problemset/problem/1101/B ( EDU)
+8. https://codeforces.com/problemset/problem/1807/G2 ( https://youtu.be/0GceqBljyWM?si=Jw4XtngeIGcvuFnl)
+9. https://codeforces.com/problemset/problem/1840/B ( https://youtu.be/oCFGgaHMLnM?si=Pp2CrtDDINjaFSa3)
 
 // Interactive 
 1. https://codeforces.com/problemset/problem/1425/F
