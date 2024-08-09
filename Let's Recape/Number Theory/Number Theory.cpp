@@ -655,19 +655,19 @@ int main()
 #include <bits/stdc++.h>
 using namespace std ;
 
-set < int > st ;
+vector<int> v; // devisors
 
-void devisor ( int n  )
+void devisor(int n)
 {
-    for ( int i = 1 ; i*i <= n ; i++ )
+    for (int i = 1; i * i <= n; i++)
     {
-        if ( n%i == 0 )
+        if (n % i == 0)
         {
-            int x = i ;
-            int y = (n / i );
+            int x = i;
+            int y = n / i;
 
-            st.insert( x );
-            st.insert( y );
+            v.push_back(x);
+            if (x != y) v.push_back(y);
         }
     }
 }
@@ -678,9 +678,10 @@ int main()
     cin>> n ;
     devisor ( n );
 
-    cout << "Number of devisors : " << st.size() << '\n';
+    sort(v.begin(),v.end());
+    cout << "Number of devisors : " << v.size() << '\n';
     int sum = 0 ;
-    for ( auto it : st )
+    for ( auto it : v )
     {
         sum = sum + it ;
     }
