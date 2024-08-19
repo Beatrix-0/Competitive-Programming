@@ -18,6 +18,12 @@
 1. https://www.codechef.com/problems/PRB01?tab=statement
 --> GCD 
 1. https://codeforces.com/problemset/problem/1732/A
+2. https://www.codechef.com/problems/DIF_GCD?tab=statement 
+3. https://www.codechef.com/problems/BIPIN3 ( https://discuss.codechef.com/t/bipin3-editorial/12434)
+4. https://www.codechef.com/problems/BININVER 
+--> random 
+5. https://www.codechef.com/problems/AMMEAT2 ( https://discuss.codechef.com/t/ammeat2-editorial/1950)
+6. https://codeforces.com/problemset/problem/1866/B 
 
 
 // STL
@@ -88,6 +94,7 @@
 1. https://codeforces.com/problemset/problem/1690/D
 2. https://codeforces.com/contest/808/problem/B
 3. https://codeforces.com/problemset/problem/1690/D
+4. https://codeforces.com/problemset/problem/1973/B ( Sliding Window  in bit )
 
 // Math + Number theory 
 1. https://codeforces.com/problemset/problem/1679/A ( https://youtu.be/yLULFRZRQNM?feature=shared)
@@ -97,7 +104,9 @@
 2. https://codeforces.com/problemset/problem/1850/E ( https://youtu.be/OogIMb3IPyk?feature=shared )
 3. https://codeforces.com/contest/1928/problem/B ( https://youtu.be/UCVqiNBpt8Y?feature=shared )
 4. https://codeforces.com/contest/1873/problem/E ( https://youtu.be/UXwSw6mbtfY?feature=shared )
-
+5. https://codeforces.com/contest/702/problem/C ( https://codeforces.com/contest/702/submission/276455144 )
+6. https://codeforces.com/problemset/problem/251/A ( )
+7. https://atcoder.jp/contests/abc143/tasks/abc143_d
 
 // DFS
 1. https://codeforces.com/problemset/problem/1829/E
@@ -113,6 +122,7 @@
 
 // Binary search on answer 
 1. https://codeforces.com/contest/950/problem/B [ BS + Prefix Sum]
+2. https://codeforces.com/problemset/problem/1862/D
 
 
 // Number Theory 
@@ -182,3 +192,12 @@
 
 // Friday 
 1. https://toph.co/p/caesar-cipher
+
+// Dynamic Programming 
+1. https://codeforces.com/contest/1982/problem/C (https://youtu.be/khG2S6ffdhg?si=Thi88yVxSQAfbrX7)
+
+// Range query 
+1. https://codeforces.com/contest/1996/problem/C ( https://youtu.be/oz5-jMUhclo?si=xDB2VSTuOAdYNcqT)
+--> Difference array 
+1. https://www.hackerrank.com/challenges/crush/problem ( https://youtu.be/96RG7EBF8LI?si=dOOXnYNlI_Fw2GBG)
+2. 
