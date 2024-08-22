@@ -101,3 +101,18 @@ int32_t main()
 
     return 0;
 }
+
+/* What can we do :
+1. Single Update, Range Sum Query
+    - Update a single element in the array and then query the sum of elements over a range.
+2. Single Update, Range Max/Min/GCD/LCM/OR/AND/XOR Query
+   - Update a single element and then query the maximum, minimum, GCD, LCM, OR, AND, or XOR of a range.
+3.  Range Add Update, Single Query
+   - Add a value to all elements in a specified range and then query a single element.
+4. Range Add Update, Range Sum Query
+   - Description: Add a value to all elements in a specified range and then query the sum of
+5. Range Add Update, Range Max/Min Query
+   - Add a value to all elements in a specified range and then query the maximum or minimum of elements in another range.
+6. Range Assignment Update, Range Sum/Max/Min Query
+ - Assign a value to all elements in a specified range and then query the sum, maximum, or minimum of elements in another range.
+ */
