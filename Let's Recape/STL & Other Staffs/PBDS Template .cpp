@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define fast ios_base::sync_with_stdio(false); cin.tie(nullptr);
+
+#include <ext/pb_ds/assoc_container.hpp> // 5 line code
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+template <class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template <class K, class V> using ordered_map = tree<K, V, less<K>, rb_tree_tag, tree_order_statistics_node_update>;
+
+int main()
+{
+    fast;
+
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    freopen("error.txt", "w", stderr);
+#endif
+
+    int n;
+    cin >> n;
+    ordered_set<int> v;
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        v.insert(x);
+    }
+
+    // Output the elements in the ordered set
+    for (auto it : v)
+    {
+        cout << it << " ";
+    }
+    cout << '\n';
+    
+    // Order_of_key(k): number of elements less than k
+    int key = 9 ;
+    cout << v.order_of_key(key) << '\n';
+    
+    // find_by_order(k): returns the iterator[value] of the k-th element in a set (0-index)
+    int ind = 3;
+    cout << *v.find_by_order(ind) << '\n';
+    
+    return 0;
+}
+
+/*
+ 1. Time complexity O(logn) for both
+ 2. Can perform all task like set function
+ Problem link: https://cses.fi/problemset/task/1144
+
+ input :
+ 7
+ 4 8 1 9 2 2 4
+  */
