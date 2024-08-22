@@ -31,6 +31,8 @@
 1. https://codeforces.com/problemset/problem/1867/A
 2. https://toph.co/p/icpc-is-coming-in-hot
 3. https://codeforces.com/problemset/problem/999/C?fbclid=IwAR2JhoDNgpg5ebU2vJkyv-srqgz4CtBgLMlLzKKSjj0R6fZt_NE51qCi8zI
+--> Priority Queue 
+1. https://www.codechef.com/START148D/problems/JUSTTWO
 
 --> 
 1. https://codeforces.com/contest/1917/problem/B ( https://youtu.be/b83MQuZh7Ho?feature=shared)
@@ -201,3 +203,8 @@
 --> Difference array 
 1. https://www.hackerrank.com/challenges/crush/problem ( https://youtu.be/96RG7EBF8LI?si=dOOXnYNlI_Fw2GBG)
 2. 
+
+// MEX
+1. https://codeforces.com/problemset/problem/1375/D ( https://youtu.be/iM54H0PH0A8?si=dfBgQ4Ml8xLI881v)
+2. https://codeforces.com/contest/1935/problem/B ( https://youtu.be/ZfBiEfimAz8?si=70hG73ytAgzRZlbb)
+3. 
