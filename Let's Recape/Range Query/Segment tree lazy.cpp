@@ -4,14 +4,14 @@ using namespace std;
 const int N = 5e5 + 9;
 int a[N];
 
-struct ST
+struct SegmentTree
 {
 #define lc (n << 1) // (n << 1) = 2*n
 #define rc ((n << 1) + 1) // ((n << 1) + 1) = 2*n+1
 
     long long t[4 * N], lazy[4 * N];
 
-    ST()
+    SegmentTree()
     {
         memset(t, 0, sizeof t);
         memset(lazy, 0, sizeof lazy);
@@ -21,14 +21,13 @@ struct ST
     {
         if (lazy[n] != 0)
         {
-            // Apply the pending updates to the current segment
             t[n] += lazy[n] * (e - b + 1);
-            if (b != e)    // If not a leaf node, propagate to children
+            if (b != e)  
             {
                 lazy[lc] += lazy[n];
                 lazy[rc] += lazy[n];
             }
-            lazy[n] = 0;  // Clear the lazy value for this node
+            lazy[n] = 0; 
         }
     }
 
@@ -53,7 +52,7 @@ struct ST
         int mid = (b + e) >> 1;
         build(lc, b, mid);
         build(rc, mid + 1, e);
-        pull(n);           // merge section
+        pull(n);          
     }
 
     void upd(int n, int b, int e, int i, int j, long long v)
@@ -62,8 +61,8 @@ struct ST
         if (j < b || i > e) return;
         if (i <= b && e <= j)
         {
-            lazy[n] = v;  // Set lazy for this node
-            push(n, b, e);  // Apply the lazy update
+            lazy[n] = v;  // Set lazy for this node ( Change section )
+            push(n, b, e); 
             return;
         }
         int mid = (b + e) >> 1;
