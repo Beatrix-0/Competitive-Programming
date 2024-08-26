@@ -1,30 +1,30 @@
 1. Sequence Containers 
 Sequence containers are data structures that maintain the order of elements. They allow you to access elements
 sequentially, typically in the order they were inserted. The elements are stored in a linear arrangement, and
-the order of insertion is preserved.
+the order of insertion is preserved. [ Order based ]
 
 - Vector :
 push_back() , pop_back() , insert() , erase() , clear() , resize() , reserve() , front() , back() , assign() 
-swap() , begin() , end() , rbegin() , rend() , cbegin() , cend() , shrink_to_fit() , at() , data()
+swap() , begin() , end() , rbegin() , rend() 
 - Deque :
 push_back() , push_front() , pop_back() , pop_front() , insert() , erase() , clear() , resize() , front() 
-back() , assign() , begin() , begin() , rbegin() , rend() , cbegin() , cend() , shrink_to_fit() , at() 
+back() , assign() , begin() , end() , rbegin() , rend()
 
 
 2. Associative Containers 
 Associative containers store elements in a way that allows fast retrieval based on keys, rather than the position
 of the elements. These containers are typically implemented as balanced binary trees (e.g., red-black trees) 
-or hash tables, providing fast search, insertion, and deletion operations.
+or hash tables, providing fast search, insertion, and deletion operations. [ Key based]
 
 - Set / multiset :
 insert() , erase() , clear() , find() , count() , lower_bound() , upper_bound() , swap() , begin() , end()  
-rbegin() , rend() , equal_range() , cbegin() , cend()
+rbegin() , rend() , equal_range() 
 - map / multimap :
 insert() , erase() , clear() , find() , count() , lower_bound() , upper_bound() , swap() , begin() , end()  
-rbegin() , rend() , equal_range() , cbegin() , cend() , at() , operator[]() 
+rbegin() , rend() , equal_range() 
 - unordered_set :
 insert() , erase() , clear() , find() , count() ,  swap() , begin() , end() , equal_range() , bucket_count()
-rbegin() , rend() , equal_range() , cbegin() , cend() , load_factor() , max_load_factor() , rehash() , reserve()
+rbegin() , rend() , load_factor() , max_load_factor() , rehash() , reserve()
 
 
 3. Container Adapters
