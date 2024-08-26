@@ -56,3 +56,16 @@ int main()
  7
  4 8 1 9 2 2 4
   */
+/* Practice Problem :
+1. https://leetcode.com/problems/count-of-range-sum/description/
+2. https://leetcode.com/problems/number-of-pairs-satisfying-inequality/description/
+3. https://leetcode.com/problems/create-sorted-array-through-instructions/description/
+4. https://leetcode.com/problems/reverse-pairs/description/
+5. https://codeforces.com/problemset/problem/61/E
+6. https://leetcode.com/problems/count-of-range-sum/description/
+*/
+/*
+Resources :
+1. https://youtu.be/EckwF4gFG34?si=WVPJ2mpqvo_8cCHR
+2. https://youtu.be/IWyIwLFucU4?si=itv_WfZYJQwKsJMs 
+*/
