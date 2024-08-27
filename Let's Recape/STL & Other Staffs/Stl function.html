@@ -1,9 +1,9 @@
-1. Sequence Containers 
+1. Sequence Containers {O(n) or O(1)}
 Sequence containers are data structures that maintain the order of elements. They allow you to access elements
 sequentially, typically in the order they were inserted. The elements are stored in a linear arrangement, and
 the order of insertion is preserved. [ Order based ]
 
-- Vector :
+- Vector : 
 push_back() , pop_back() , insert() , erase() , clear() , resize() , reserve() , front() , back() , assign() 
 swap() , begin() , end() , rbegin() , rend() 
 - Deque :
@@ -11,7 +11,7 @@ push_back() , push_front() , pop_back() , pop_front() , insert() , erase() , cle
 back() , assign() , begin() , end() , rbegin() , rend()
 
 
-2. Associative Containers 
+2. Associative Containers { logn }
 Associative containers store elements in a way that allows fast retrieval based on keys, rather than the position
 of the elements. These containers are typically implemented as balanced binary trees (e.g., red-black trees) 
 or hash tables, providing fast search, insertion, and deletion operations. [ Key based]
@@ -27,7 +27,7 @@ insert() , erase() , clear() , find() , count() ,  swap() , begin() , end() , eq
 rbegin() , rend() , load_factor() , max_load_factor() , rehash() , reserve()
 
 
-3. Container Adapters
+3. Container Adapters {O(1) or O(logn)}
 Container adapters are special kinds of containers that provide a different interface for other existing sequence
 containers. They adapt a container by restricting access to certain operations, providing a simpler or more 
 specialized interface.
