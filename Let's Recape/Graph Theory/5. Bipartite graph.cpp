@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std ;
 
-const int N = 1e5
+const int N = 1e5 ;
 vector< int > g(N);
 bool vis[N];
 bool ok ;
@@ -63,3 +63,4 @@ int main()
     return 0 ;
 }
 
+// Problem : https://cses.fi/problemset/task/1668/
