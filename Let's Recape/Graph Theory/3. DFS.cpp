@@ -2,7 +2,7 @@
 using namespace std ;
 
 const int N = 105 ;
-vector < int > g(N);
+vector < int > g[N];
 bool vis[N];
 
 void dfs ( int u )

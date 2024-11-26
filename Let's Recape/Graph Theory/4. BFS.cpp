@@ -2,7 +2,7 @@
 using namespace std ;
 
 const int N = 1e5 ;
-vector< int > g(N);
+vector< int > g[N];
 bool vis[N];
 int par[N] , dis[N];
 
