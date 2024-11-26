@@ -67,3 +67,6 @@ int main()
 
     return 0;
 }
+
+//video : https://youtu.be/wNr-CG0AUPk?si=3q3sZzVpMdKyjX0w
+// Problem : https://cses.fi/problemset/task/1193
