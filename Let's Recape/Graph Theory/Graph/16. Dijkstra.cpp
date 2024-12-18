@@ -62,6 +62,15 @@ int main()
     return 0;
 }
 
+/*
+3 4
+1 2 6
+1 3 2
+3 2 3
+1 3 4
+*/
+// Video : https://youtu.be/V6H1qAeB-l4?si=0Ucbf2j8OKhkWVKW 
+// Problem : https://cses.fi/problemset/task/1671
 
 Code 02 : Dijkstra with set
 Time Compexity : O(ElogV)
