@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h> // O ( n * L )
 using namespace std;
 
 struct Trie // node
@@ -8,16 +8,17 @@ struct Trie // node
     struct Trie *child[26];
 } * root;
 
-void Create()
+Trie *Create()
 {
-    root = new Trie();
-    root->pref_cnt = 0;
-    root->isEnd = false;
+    Trie *node = new Trie();
+    node->pref_cnt = 0;
+    node->isEnd = false;
     for (int i = 0; i < 26; i++)
-        root->child[i] = NULL;
+        node->child[i] = NULL;
+    return node;
 }
 
-void Insert(string s)
+void Insert(string s) // O( n*L) L = string length
 {
     Trie *cur = root;
     cur->pref_cnt++;
@@ -26,11 +27,7 @@ void Insert(string s)
         int ind = s[i] - 'a';
         if (cur->child[ind] == NULL)
         {
-            Trie *newNode = new Trie();
-            newNode->pref_cnt = 0;
-            newNode->isEnd = false;
-            for (int j = 0; j < 26; j++)
-                newNode->child[j] = NULL;
+            Trie *newNode = Create();
             cur->child[ind] = newNode;
         }
         cur->child[ind]->pref_cnt++;
@@ -39,7 +36,7 @@ void Insert(string s)
     cur->isEnd = true;
 }
 
-bool Search(string s)
+bool Search(string s) // O( q1*L)
 {
     Trie *cur = root;
     for (int i = 0; i < s.size(); i++)
@@ -54,7 +51,7 @@ bool Search(string s)
     return cur->isEnd;
 }
 
-int word_with_pref(string pref)
+int word_with_pref(string pref) // O( q2*L)
 {
     Trie *cur = root;
     for (int i = 0; i < pref.size(); i++)
@@ -71,7 +68,7 @@ int word_with_pref(string pref)
 
 int main()
 {
-    Create();
+    root = Create();
 
     int n;
     cin >> n;
@@ -107,7 +104,7 @@ int main()
         int count = word_with_pref(y);
         if (count == 0)
         {
-            cout << "No such prefix exists" << '\n';
+            cout << "No complete word starts with it" << '\n';
         }
         else
         {
@@ -124,4 +121,6 @@ siam ahmed fahim khan emad
 juton siam emad
 3
 sia ah mh
+
+problem :  https://www.spoj.com/problems/ADAINDEX/
 */
