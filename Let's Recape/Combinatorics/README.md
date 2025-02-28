@@ -32,6 +32,7 @@ $$
 $$
 
 So, the exponent of $5$ in $100!$ is **24**. </br>
+Time complexity : $O(log_pn)$
 ```
 int fact_pow (int n, int k) {
     int res = 0;
