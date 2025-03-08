@@ -103,12 +103,12 @@ bool isValid( int nx , int ny ){
 int dfs( int x , int y , vector<pair<int,int>>&com ){
     vis[x][y] = true ;
     com.push_back({x ,y});
-    int ans = 0 ;
-
+    
+     int ans = (ch[x][y] == 'C' ? 1 : 0);
     for ( auto [dx , dy] : dir ){
         int nx = x+dx , ny = y + dy;
         if( isValid(nx , ny )){
-            ans += (ch[nx][ny] == 'C' ? 1 : 0 ) + dfs( nx , ny , com );
+            ans += dfs( nx , ny , com );
         }
     }
     return ans ;
