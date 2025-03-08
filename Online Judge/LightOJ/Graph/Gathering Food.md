@@ -92,8 +92,11 @@ vector<pair<int, int>> dir = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 // Check if the next cell is valid
 bool isValid(int nx, int ny) {
     if (nx >= 0 && nx < n && ny >= 0 && ny < n && !vis[nx][ny] && ch[nx][ny] != '#') {
-        if (ch[nx][ny] == '.' || ch[nx][ny] == dest) {
-            return true;
+        if ((ch[nx][ny]>dest && dest<='Z') || (ch[nx][ny]>dest=='#')) {
+            return false;
+        }
+        else {
+            return true ;
         }
     }
     return false;
