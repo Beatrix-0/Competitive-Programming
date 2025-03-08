@@ -110,7 +110,7 @@ signed main() {
         for (int i = 1; i <= n; i++) {
             g[i].clear();
         }
-        memset(vis , 0 , sizeof(vis));
+        fill(vis.begin(), vis.begin() + n + 1, 0);
 
         int total_money = 0;
         for (int i = 1; i <= n; i++) {
