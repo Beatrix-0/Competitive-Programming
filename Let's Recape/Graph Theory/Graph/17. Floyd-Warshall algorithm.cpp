@@ -28,8 +28,8 @@ int main()
     {
         int u, v, wt;
         cin >> u >> v >> wt;
-        dis[u][v] = wt ;
-        dis[v][u] = wt ;
+        dis[u][v] = min(dis[u][v] , 1LL*wt);
+        dis[v][u] = min(dis[v][u] , 1LL*wt);
     }
 
     // Floyd-Warshall algorithm
