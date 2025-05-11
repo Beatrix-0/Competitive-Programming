@@ -6,7 +6,7 @@ const int mx = 1e7+123;
 int is_prime[mx];
 void sieve ( int n )
 {
-    for ( int i = 1 ; i*i <= n ; i++)
+    for ( int i = 1 ; i <= n ; i++)
     {
         is_prime[i] = 1 ;
     }
