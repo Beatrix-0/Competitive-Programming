@@ -1,15 +1,15 @@
-const int N = 1e6;
-int spf[N + 1];
+const int mx = 1e6;
+int spf[mx + 1];
 vector<int> primes;
 
-void computeSPF() {
-    for (int i = 2; i <= N; ++i) {
+void SPF() {
+    for (int i = 2; i <= mx; ++i) {
         if (spf[i] == 0) {
             spf[i] = i;
             primes.push_back(i);
         }
         for (int p : primes) {
-            if (p > spf[i] || i * p > N) break;
+            if (p > spf[i] || i * p > mx) break;
             spf[i * p] = p;
         }
     }
