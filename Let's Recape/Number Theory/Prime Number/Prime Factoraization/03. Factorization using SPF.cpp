@@ -2,8 +2,9 @@
 using namespace std;
 
 const int mx = 1e6;
-int spf[mx + 1];    
-vector<int> primes;  
+int spf[mx + 1];
+vector<int> primes;
+vector<int> g[mx + 1]; 
 
 // Time Complexity: O(N log log N)
 void computeSPF() {
@@ -19,28 +20,41 @@ void computeSPF() {
     }
 }
 
-// Prime factorization using precomputed SPF
-// Time Complexity: O(log n)
-unordered_map<int, int> getPrimeFactors(int x) {
-    unordered_map<int, int> count;
-    while (x > 1) {
-        int p = spf[x];
-        count[p]++;
-        x /= p;
+// Time Complexity: O(log val)
+vector<int> getPFactor(int val) {
+    vector<int> tmp;
+    while (val > 1) {
+        int p = spf[val];
+        tmp.push_back(p);
+        while (val % p == 0) { // calculate frq from here 
+            val /= p;
+        }
     }
-    return count;
+    return tmp;
 }
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     computeSPF();
 
-    int num = 100;
-    auto factors = getPrimeFactors(num);
-
-    cout << "Prime factorization of " << num << ":\n";
-    for (auto [p, freq] : factors) {
-        cout << p << "^" << freq << "\n";
+    int n; cin >> n;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++) {
+        cin >> v[i];
+        g[v[i]] = getPFactor(v[i]);
     }
+
+    
+    // for (int i = 0; i < n; i++) {
+    //     cout << "Prime factors of " << v[i] << ": ";
+    //     for (int p : g[v[i]]) {
+    //         cout << p << " ";
+    //     }
+    //     cout << '\n';
+    // }
+    
 
     return 0;
 }
