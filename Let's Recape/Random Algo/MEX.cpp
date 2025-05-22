@@ -1,51 +1,71 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void initialize(vector<int>& v, map<int, int>& mp, set<int>& missing_numbers) {
-    int n = v.size();
-    for (int i = 0; i <= n; i++)
-        missing_numbers.insert(i);
+const int mx = 2e5 + 5;
 
-    for (auto it : v) {
-        mp[it]++;
-        missing_numbers.erase(it);
+vector<int> A;
+map<int, int> freq;
+set<int> missing;
+
+void build(const vector<int>& v) { // nlogn (pre compute)
+    A = v;
+    freq.clear();
+    missing.clear();
+
+    int n = A.size();
+    for (int i = 0; i <= n; i++) {
+        missing.insert(i);
+    }
+
+    for (int x : A) {
+        freq[x]++;
+        missing.erase(x);
     }
 }
 
-int get_mex(const set<int>& missing_numbers) {
-    return *missing_numbers.begin();
+int get() { // O(1)
+    return *missing.begin();
 }
 
-void update(vector<int>& v, map<int, int>& mp, set<int>& missing_numbers, int idx, int val) {
-    if (--mp[v[idx]] == 0)
-        missing_numbers.insert(v[idx]);
+void update(int idx, int new_val) { // logn 
+    int old_val = A[idx];
 
-    v[idx] = val;
-    mp[val]++;
-    missing_numbers.erase(val);
+    freq[old_val]--;
+    if (freq[old_val] == 0) {
+        missing.insert(old_val);
+    }
+
+    A[idx] = new_val;
+    freq[new_val]++;
+    missing.erase(new_val);
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    int n;
-    cin >> n;
+    int n, q;
+    cin >> n >> q;
     vector<int> v(n);
+
     for (int i = 0; i < n; i++) {
         cin >> v[i];
     }
 
-    map<int, int> mp;
-    set<int> st; // Missing numbers
+    build(v);
 
-    initialize(v, mp, st);
+    while (q--) {
+        int type;
+        cin >> type;
 
-    cout << "Initial mex: " << get_mex(st) << '\n';
-    update(v, mp, st, 2, 2); // Update index 2 to value 2
-    cout << "Mex after update: " << get_mex(st) << '\n';
+        if (type == 1) {
+            cout << get() << '\n';
+        } else if (type == 2) {
+            int idx, val;
+            cin >> idx >> val;
+            update(idx, val);
+        }
+    }
 
     return 0;
 }
