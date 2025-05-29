@@ -1,6 +1,3 @@
-// Problem : https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/
-
-
 Code Leetcode Formate : 
 class Solution {
 public:
@@ -91,3 +88,6 @@ int main()
     
     return 0 ;
 }
+
+// Problem : https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/
+// Tutorial : https://youtu.be/smTnSl6UKi0?si=TJObNtVVdGug5325
