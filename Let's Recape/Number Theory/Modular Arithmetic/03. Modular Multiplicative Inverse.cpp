@@ -7,19 +7,15 @@ const int mod = 1e9+7;
 
 int power ( int a , int n , int mod )
 {
-    if ( n == 1 )
-    {
+    if ( n == 1 ){
         return a % mod ;
     }
-    else
-    {
-        if ( n % 2 == 0 )
-        {
+    else{
+        if ( n % 2 == 0 ){
             int x = power( a , n/2 , mod );
             return ( x * 1LL * x ) % mod ;
         }
-        else
-        {
+        else{
             int x = power( a , n/2 , mod );
             return ( x * 1LL * x ) % mod * a % mod ;
         }
@@ -27,15 +23,14 @@ int power ( int a , int n , int mod )
 
 }
 
-int inverse ( int a , int n )
-{
+int inverse ( int a , int n ){
     return ( power ( a , n-2 , n ) );
 }
 
 int main()
 {
     int a = 5 , n = 7;
-    cout << inverse ( a , n );
+    cout << inverse ( a , n ); // is this calculating (a⁻¹ % n)
 
     return 0;
 }
