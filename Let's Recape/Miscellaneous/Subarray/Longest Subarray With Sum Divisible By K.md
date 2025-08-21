@@ -1,4 +1,4 @@
-## Longest Subarray With Sum Divisible By K
+## Longest Subarray Length With Sum Divisible By K
 
 [Video Tutoral](https://youtu.be/hviDtcBVpho?si=K1PD_GlhUegOs6xb)
 
@@ -6,12 +6,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long 
+#define int long long
 signed main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n , k ; 
+    int n , k ;
     cin >> n >> k ;
 
     vector<int> v(n+1);
@@ -19,7 +19,7 @@ signed main() {
         cin >> v[i];
     }
 
-    vector<int> vis(k, -1); 
+    vector<int> vis(k, -1);
     int pref = 0;
     int len = 0;
 
@@ -28,12 +28,12 @@ signed main() {
         int m = pref % k;
 
         if (m == 0) {
-            len = max(len, i); 
+            len = max(len, i);
         } else {
             if (vis[m] != -1) {
                 len = max(len, i - vis[m]);
             } else {
-                vis[m] = i; 
+                vis[m] = i;
             }
         }
     }
