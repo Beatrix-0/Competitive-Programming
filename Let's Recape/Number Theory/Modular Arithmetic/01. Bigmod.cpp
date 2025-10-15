@@ -56,7 +56,7 @@ int bin_power ( int a , int n )
             ans = ( ans * 1LL * a ) % mod ;
         }
         a = ( a *1LL * a )% mod ;
-        n >> = 1 ;
+        n >>= 1 ;
     }
     return ans ;
 }
