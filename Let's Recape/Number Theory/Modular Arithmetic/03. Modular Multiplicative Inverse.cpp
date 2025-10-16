@@ -3,28 +3,23 @@
 using namespace std ;
 
 #define LL long long int
-const int mod = 1e9+7;
-
-int power ( int a , int n , int mod )
+int bin_power ( int a , int n , int mod)
 {
-    if ( n == 1 ){
-        return a % mod ;
-    }
-    else{
-        if ( n % 2 == 0 ){
-            int x = power( a , n/2 , mod );
-            return ( x * 1LL * x ) % mod ;
+    int ans = 1 ;
+    while ( n )
+    {
+        if ( n & 1)
+        {
+            ans = ( ans * 1LL * a ) % mod ;
         }
-        else{
-            int x = power( a , n/2 , mod );
-            return ( x * 1LL * x ) % mod * a % mod ;
-        }
+        a = ( a *1LL * a )% mod ;
+        n >>= 1 ;
     }
-
+    return ans ;
 }
 
 int inverse ( int a , int n ){
-    return ( power ( a , n-2 , n ) );
+    return ( bin_power ( a , n-2 , n ) );
 }
 
 int main()
