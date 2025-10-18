@@ -21,7 +21,7 @@ signed main() {
 
     vector<int> pre(n + 1);
     for (int i = 1; i <= n; i++) {
-        pre[i] = pre[i - 1] + pre[i];
+        pre[i] = pre[i - 1] + diff[i];
     }
 
     for (int i = 1; i <= n; i++) {
