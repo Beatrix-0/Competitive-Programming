@@ -47,7 +47,7 @@ int longestSubarraySumLEK(const vector<int>& a, long long k) {
 
 2(ii). Longest Subarray with Sum ≤ K (Variable Window / Two Pointers)[both pos & neg]
 
-````cpp
+```cpp
 int getLongestSubarray(vector<int>& a, int k) {
     int n = a.size();
 
@@ -72,12 +72,12 @@ int getLongestSubarray(vector<int>& a, int k) {
             preSumMap[sum] = i;
         }
     }
-
     return maxLen;
 }
 ```
 
 3. Longest Subarray with |max - min| ≤ K (Monotonic Deque)
+
 ```cpp
 int longestSubarrayAbsDiffLEK(const vector<int>& a, int k) {
     deque<int> mx, mn;
@@ -102,7 +102,7 @@ int longestSubarrayAbsDiffLEK(const vector<int>& a, int k) {
     }
     return ans;
 }
-````
+```
 
 4. Longest Subarray (or Substring) with At Most K Distinct Elements
 
