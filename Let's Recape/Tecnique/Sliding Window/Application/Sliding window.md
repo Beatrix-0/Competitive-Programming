@@ -75,6 +75,7 @@ int getLongestSubarray(vector<int>& a, int k) {
 
     return maxLen;
 }
+```
 
 3. Longest Subarray with |max - min| ≤ K (Monotonic Deque)
 ```cpp
