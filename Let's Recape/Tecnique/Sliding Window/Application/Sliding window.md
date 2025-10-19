@@ -79,26 +79,32 @@ int getLongestSubarray(vector<int>& a, int k) {
 3. Longest Subarray with |max - min| ≤ K (Monotonic Deque)
 
 ```cpp
+#define int long long
 int longestSubarrayAbsDiffLEK(const vector<int>& a, int k) {
     deque<int> mx, mn;
-    int left = 0, ans = 0;
+    int l = 0, ans = 0;
+    int n = a.size();
 
-    for (int right = 0; right < (int)a.size(); right++) {
-        // Maintain max deque
-        while (!mx.empty() && a[mx.back()] < a[right]) mx.pop_back();
-        mx.push_back(right);
+    for (int r = 0; r < n; r++) {
 
-        // Maintain min deque
-        while (!mn.empty() && a[mn.back()] > a[right]) mn.pop_back();
-        mn.push_back(right);
-
-        // Shrink window if invalid
-        while (a[mx.front()] - a[mn.front()] > k) {
-            if (mx.front() == left) mx.pop_front();
-            if (mn.front() == left) mn.pop_front();
-            left++;
+        // inserting decresing order
+        while (!mx.empty() && a[mx.back()] < a[r]) {
+            mx.pop_back();
         }
-        ans = max(ans, right - left + 1);
+        mx.push_back(r);
+
+        // inserting incresing order
+        while (!mn.empty() && a[mn.back()] > a[r]) {
+            mn.pop_back();
+        }
+        mn.push_back(r);
+
+        while (a[mx.front()] - a[mn.front()] > k) {
+            if (mx.front() == l) mx.pop_front();
+            if (mn.front() == l) mn.pop_front();
+            l++;
+        }
+        ans = max(ans, r - l + 1);
     }
     return ans;
 }
