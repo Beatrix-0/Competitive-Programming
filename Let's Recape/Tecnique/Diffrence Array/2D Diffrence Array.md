@@ -4,8 +4,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long 
-const int MX = 1002; 
+#define int long long
+const int MX = 1002;
 int diff[MX][MX];
 int pre[MX][MX];
 
@@ -17,10 +17,10 @@ signed main() {
     cin >> N >> K;
 
     for (int i = 1; i <= N; i++) {
-        int x1, y1, x2, y2;
+        int x1, y1, x2, y2; // 0 based index
         cin >> x1 >> y1 >> x2 >> y2;
 
-        x1++, y1++, x2++, y2++;
+        x1++, y1++, x2++, y2++; // converting 1 based index
 
         diff[x1][y1] += 1;
         diff[x2][y1] -= 1;
@@ -32,7 +32,7 @@ signed main() {
     for (int i = 1; i <= 1001; i++) {
         for (int j = 1; j <= 1001; j++) {
             pre[i][j] = diff[i][j] + pre[i-1][j] + pre[i][j-1] - pre[i-1][j-1];
-            if (pre[i][j] == K) ans++; // based on condition 
+            if (pre[i][j] == K) ans++; // based on condition
         }
     }
 
