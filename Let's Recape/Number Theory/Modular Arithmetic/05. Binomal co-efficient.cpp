@@ -16,30 +16,20 @@ int fact(int x)
     return ans ;
 }
 
-int inverse(int a, int n )
+int inverse ( int a , int n)
 {
-    if (n == 0)
+    int ans = 1 ;
+    while ( n )
     {
-        return 1 ;
-    }
-    else
-    {
-        if (n % 2 == 0)
+        if ( n & 1)
         {
-            int ans = inverse(a, n / 2 );
-            ans = (ans * 1LL * ans) % mod;
-            return ans;
+            ans = ( ans * 1LL * a ) % mod ;
         }
-        else
-        {
-            int ans = inverse(a, n / 2 );
-            ans = (ans * 1LL * ans) % mod;
-            ans = (ans * 1LL * a) % mod;
-            return ans;
-        }
+        a = ( a *1LL * a )% mod ;
+        n >>= 1 ;
     }
+    return ans ;
 }
-
 
 signed main()
 {
@@ -54,8 +44,10 @@ signed main()
     ans = (ans * 1LL * opr1) % mod;
     ans = (ans * 1LL * opr2) % mod;
     cout << "nCr : " << ans << endl;
+
     return 0;
 }
+
 
 Problem :
 1. https://codeforces.com/contest/1922/problem/B
