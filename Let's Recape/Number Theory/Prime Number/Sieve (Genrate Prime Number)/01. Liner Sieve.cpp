@@ -25,7 +25,6 @@ int main()
         cout << it << " ";
     }
     cout << '\n';
-
     return 0 ;
 }
 
