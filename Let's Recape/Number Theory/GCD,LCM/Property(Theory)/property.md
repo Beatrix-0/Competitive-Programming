@@ -9,3 +9,5 @@
 ## Problem
 
 [A. Orac and LCM](https://codeforces.com/contest/1349/problem/A)
+
+[Video Solve](https://youtu.be/ms3PjY4qK9w?si=ft7aNKsMEVwemlA3)
