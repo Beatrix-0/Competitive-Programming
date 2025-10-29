@@ -8,25 +8,20 @@ vector<int> prime ;
 
 int main()
 {
-    for (int i = 2; i <= mx; i++ )
-    {
-        if (v[i] == 0)
-        {
+    for (int i = 2; i <= mx; i++ ){
+        if (v[i] == 0){
             v[i] = i;
             prime.push_back(i);
         }
-        for (int j = 0; j < prime.size() && i * prime[j] <= mx; j++)
-        {
+        for (int j = 0; j < prime.size() && i * prime[j] <= mx; j++){
             v[i * prime[j]] = prime[j];
-            if (prime[j] == v[i])
-            {
+            if (prime[j] == v[i]){
                 break;
             }
         }
     }
 
-    for ( auto it : prime )
-    {
+    for ( auto it : prime ){
         cout << it << " ";
     }
     cout << '\n';
@@ -47,37 +42,29 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    for ( int i = 1 ; i < mx ; i++ )
-    {
+    for ( int i = 1 ; i < mx ; i++ ){
         prime[i] = true ;
     }
 
-    for ( int  i = 4 ; i < mx ; i+=2 )
-    {
+    for ( int  i = 4 ; i < mx ; i+=2 ){
         prime[i] = false ;
     }
 
-    for( int i = 3 ; i < mx ; i+=2 )
-    {
-        if ( prime[i])
-        {
-          for( int j = 2*i ; j < mx ; j += i)
-          {
+    for( int i = 3 ; i < mx ; i+=2 ){
+        if ( prime[i]){
+          for( int j = 2*i ; j < mx ; j += i){
               prime[j] = false ;
           }
         }
     }
 
-    for ( int i = 2 ; i < mx ; i++ )
-    {
-        if ( prime[i])
-        {
+    for ( int i = 2 ; i < mx ; i++ ){
+        if ( prime[i]){
             ans.push_back(i);
         }
     }
 
-    for ( auto it : ans )
-    {
+    for ( auto it : ans ){
         cout << it << " ";
     }
     cout << '\n';
