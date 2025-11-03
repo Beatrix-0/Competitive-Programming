@@ -17,11 +17,11 @@ void SPF() {
         }
     }
 
-    for ( int i = 0 ; i < primes.size() ; i++ ){
-            if ( (i+1) % 100 == 1 ){
-            cout << primes[i]<< '\n';
-        }
-    }
+    // for ( int i = 0 ; i < primes.size() ; i++ ){
+    //         if ( (i+1) % 100 == 1 ){
+    //         cout << primes[i]<< '\n';
+    //     }
+    // }
 }
 
 int main()
