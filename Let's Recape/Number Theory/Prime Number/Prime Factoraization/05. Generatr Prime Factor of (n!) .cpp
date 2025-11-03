@@ -1,62 +1,53 @@
-#include<bits/stdc++.h>
-using namespace std ;
+// ...existing code...
+#include <bits/stdc++.h>
+using namespace std;
 
-struct node{
-    int o , z ;
-};
+const int mx =100000000 ;
+int spf[mx + 1];
+vector<int> primes;
 
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    
-    int tc ; cin>> tc ;
-    for ( int i = 1 ; i <= tc ; i++ ){
-        int n , q ;
-        cin >> n >> q ;
-        vector<int> v(n+1);
-        vector<int>tmp;
-        for ( int i = 1 ; i <= n ; i++ ){
-            cin >> v[i];
+void SPF() {
+    for (int i = 2; i <= mx; ++i) {
+        if (spf[i] == 0) {
+            spf[i] = i;
+            primes.push_back(i);
         }
-
-        for ( int i = 2 ; i <= n ; i++ ){
-            if( v[i] == v[i-1]){
-                tmp.push_back(i-1);
-            }
-        }
-        vector<node>pre(n+1 , {0,0});
-        for ( int i = 1 ; i <= n ; i++ ){
-            pre[i].o = pre[i-1].o + (v[i] == 1);
-            pre[i].z = pre[i-1].z + (v[i] == 0);
-        }
-
-        while ( q-- ){
-            int l , r ;
-            cin >> l >> r ;
-            int zero = pre[r].z - pre[l-1].z;
-            int one = pre[r].o - pre[l-1].o;
-
-            if( (zero%3 == 0) && (one %3 == 0) ){
-                auto it = lower_bound(tmp.begin() , tmp.end() , l);
-                int val = 1e9;
-                if( it != tmp.end()){
-                    val = *it;
-                }
-                
-                if (val < r ){
-                    int op = r-l+1;
-                    cout << op/3 << '\n';
-                }
-                else {
-                    int op = (r-l+1)-3 ;
-                    cout << (op/3)+2 << '\n';
-                }
-            }else {
-                cout << -1 << '\n';
-            }
+        for (int p : primes) {
+            if (p > spf[i] || i * p > mx) break;
+            spf[i * p] = p;
         }
     }
-    
-    return 0 ;
+}
+
+long long fact_pow(int n, int p) { //O(logn)
+    long long res = 0;
+    while (n) {
+        n /= p;
+        res += n;
+    }
+    return res;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    SPF();
+
+    int n ; cin >> n ;
+
+    map<int,int>mp;
+    for ( auto p : primes){
+        if ( p > n ) break;
+        int cnt = fact_pow( n , p);
+        if ( p > 0 ){
+            mp[p] = cnt ;
+        }
+    }
+
+    for ( auto[p,e] : mp ){
+        cout << p << " " << e << '\n';
+    }
+
+    return 0;
 }
