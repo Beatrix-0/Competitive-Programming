@@ -81,11 +81,12 @@ int32_t main()
     {
         string s, p;
         cin >> p >> s;
-        Hashing h(s);
-        auto hs = Hashing(p).get_hash();
+        Hashing fixed(p);
+        Hashing move(s);
+        auto hashVal = fixed.get_hash();
         for(int i = 1; i + n - 1 <= s.size(); i++)
         {
-            if (h.get_hash(i, i + n - 1) == hs) cout << i - 1 << '\n';
+            if (move.get_hash(i, i + n - 1) == hashVal) cout << i - 1 << '\n';
         }
         cout << '\n';
     }
