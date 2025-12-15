@@ -1,54 +1,36 @@
-// Kadane's Algorithm | Maximum Subarray Sum | TC = O(n)
-// Code :
-#include<bits/stdc++.h>
-using namespace std ;
+#include <bits/stdc++.h>
+using namespace std;
 
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+#ifndef ONLINE_JUDGE
+#include "trace.cpp"
+#else
+#define dbg(...)
+#endif
 
-    int n ; cin>> n ;
-    vector < int > v(n);
-    for ( int i = 0 ; i < n ; i++ )
-    {
-        cin>> v[i];
+void solve() {
+    int n; cin >> n ;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++) {
+        cin >> v[i];
     }
 
-    // for sum
-    int ans = INT_MIN;
-    int sum = 0 ;
-
-    // for index
-    int tmp_st , st_ind = -1 , end_ind = -1 ;
-
-    for ( int i = 0 ; i< n ; i++ )
-    {
-        if ( sum == 0 )
-        {
-            tmp_st = i ;
-        }
-        sum = sum + v[i];
-        if ( sum > ans )
-        {
-           ans = sum ;
-           st_ind = tmp_st;
-           end_ind = i ;        
-        }
-        if ( sum < 0 )
-        {
-            sum = 0 ;
-        }
-    } 
-
-    cout << "Maximum Subarray sum : " << ans << '\n';
-    cout << "Maximum Subarray length is :" << st_ind+1 << " to " << end_ind+1 << '\n';
-
-    return 0 ;
+    int current_sum = v[0];
+    int max_sum = v[0];
+    for (int i = 1; i < n; i++) {
+        current_sum = max(v[i], current_sum + v[i]);
+        max_sum = max(max_sum, current_sum);
+    }
+    cout << max_sum << '\n';
 }
 
-Problem :
-1. https://leetcode.com/problems/maximum-subarray/submissions/1205060391/
-2. https://cses.fi/problemset/result/8753617/
+int32_t main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
---------------------------------------------------------------------------------------------------------------------
+    int tests = 1;
+    cin >> tests;
+    for ( int tc = 1 ; tc <= tests ; tc++ ){
+        solve();
+    }
+    return 0;
+}
