@@ -41,7 +41,7 @@ int main()
     return 0;
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------
-// Code for storing doublicate value :
+// pair of multiset
 #include<bits/stdc++.h>
 using namespace std;
 #define fast ios_base::sync_with_stdio(false); cin.tie(nullptr);
@@ -89,6 +89,16 @@ int main()
 }
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
+// Multiset 
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+template <class T> 
+using ordered_multiset = tree<T, null_type, less_equal<T>, rb_tree_tag,tree_order_statistics_node_update>;
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 /*
  1. Time complexity O(logn) for both
  2. Can perform all task like set function
