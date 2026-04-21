@@ -7,6 +7,10 @@ An interactive problem is a type of competitive programming or algorithmic probl
 3. Receives feedback from the judge
 4. Repeats until the problem is solved
 
+<br>
+
+Problem : [Hidden Integer(CSES)](https://cses.fi/problemset/task/3112/)
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,12 +27,12 @@ string ask(int num) {
     string s; // judge(me) giving input ("<",">=" )
     if (!(cin >> s)) {
         exit(0);
-    }  
+    }
     return s;
 }
 
 void solve() {
-    int l = 1, r = 1000000;  
+    int l = 1, r = 1000000;
     int ans = -1;
 
     while (l <= r) {
