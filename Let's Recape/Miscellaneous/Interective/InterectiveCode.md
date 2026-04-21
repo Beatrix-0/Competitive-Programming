@@ -15,12 +15,6 @@ Problem : [Hidden Integer(CSES)](https://cses.fi/problemset/task/3112/)
 #include <bits/stdc++.h>
 using namespace std;
 
-#ifndef ONLINE_JUDGE
-#include "trace.cpp"
-#else
-#define dbg(...)
-#endif
-
 string ask(int num) {
     cout << "? " << num << endl;
 
