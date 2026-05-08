@@ -1,44 +1,82 @@
+# Manacher's algorithm
+
+## Resouces
+
+[Video](https://youtu.be/egkR87tSnd4?si=9N2MPzn7Qdm9AZPh)
+
+## Practice problem
+
+[Longest Palindrome](https://cses.fi/problemset/task/1111/)
+
 ```cpp
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Manacher {
-  vector<int> p[2];
-  // p[1][i] = (max odd length palindrome centered at i) / 2 [floor division]
-  // p[0][i] = same for even, it considers the right center
-  // e.g. for s = "abbabba", p[1][3] = 3, p[0][2] = 2
-  Manacher(string s) {
-    int n = s.size();
-    p[0].resize(n + 1);
-    p[1].resize(n);
-    for (int z = 0; z < 2; z++) {
-      for (int i = 0, l = 0, r = 0; i < n; i++) {
-        int t = r - i + !z;
-        if (i < r) p[z][i] = min(t, p[z][l + t]);
-        int L = i - p[z][i], R = i + p[z][i] - !z;
-        while (L >= 1 && R + 1 < n && s[L - 1] == s[R + 1])
-          p[z][i]++, L--, R++;
-        if (R > r) l = L, r = R;
-      }
+    string tmp;
+    vector<int> p;
+    Manacher(string s) {
+        tmp = "#";
+        for (auto c : s) {
+            tmp += c;
+            tmp += '#';
+        }
+        int n = tmp.size();
+        p.assign(n, 0);
+        int c = 0;
+        for (int i = 0; i < n; i++) {
+            if (i < c + p[c]) {
+                p[i] = min(c + p[c] - i, p[2 * c - i]);
+            }
+            int l = i - p[i] - 1;
+            int r = i + p[i] + 1;
+            while (l >= 0 && r < n && tmp[l] == tmp[r] ){
+                p[i]++;
+                l--;
+                r++;
+            }
+            if (i + p[i] > c + p[c]) {
+                c = i;
+            }
+        }
     }
-  }
-  bool is_palindrome(int l, int r) {
-    int mid = (l + r + 1) / 2, len = r - l + 1;
-    return 2 * p[len % 2][mid] + len % 2 >= len;
-  }
+    pair<int,int> longest_palindrome() {
+        int mx = 0;
+        int ind = 0;
+        int n = p.size();
+        for (int i = 0; i < n; i++) {
+            if (p[i] > mx) {
+                mx = p[i];
+                ind = i;
+            }
+        }
+        int start = (ind - mx) / 2;
+        return {start, mx};
+    }
+    bool is_palindrome(int l, int r) {
+        int len = r - l + 1;
+        int mid = l + r + 1;
+        return p[mid] >= len;
+    }
 };
 
+void solve() {
+
+    string s; cin >> s;
+    Manacher M(s);
+    auto [st, len] = M.longest_palindrome();
+    cout << s.substr(st, len) << '\n';
+}
+
 int32_t main() {
-  ios_base::sync_with_stdio(0);
-  cin.tie(0);
-  string s; cin >> s;
-  Manacher M(s);
-  int n = s.size();
-  for (int i = 0; i < n; i++) {
-    cout << 2 * M.p[1][i] + 1 << ' ';
-    if (i + 1 < n) cout << 2 * M.p[0][i + 1] << ' ';
-  }
-  cout << '\n';
-  return 0;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int tests = 1;
+    // cin >> tests;
+    for ( int tc = 1 ; tc <= tests ; tc++ ){
+        solve();
+    }
+    return 0;
 }
 ```
