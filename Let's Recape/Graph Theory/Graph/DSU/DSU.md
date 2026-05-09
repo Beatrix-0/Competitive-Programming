@@ -1,3 +1,7 @@
+## DSU Code
+
+```cpp
+
 #include<bits/stdc++.h>
 using namespace std ;
 
@@ -23,11 +27,11 @@ struct Disjoint_set_union{
             }
             Parent[root_v] = root_u;
             Size[root_u] += Size[root_v];
-            return true; 
+            return true;
         }
         return false;
     }
-} DSU;
+} dsu;
 
 int main()
 {
@@ -36,20 +40,24 @@ int main()
 
     int n , m ;
     cin>> n >> m ;
-    DSU.Init(n);
+    dsu.Init(n);
     while ( m-- ){
         int u , v ;
         cin>> u >> v ;
-        DSU.Union( u , v );
+        dsu.Union( u , v );
     }
 
     int conCmp = 0 ;
     for ( int i = 1 ; i <= n ; i++ ){
-        if ( DSU.Find(i) == i ){
+        if ( dsu.Find(i) == i ){
             conCmp++;
         }
     }
     cout << conCmp << '\n';
     return 0 ;
 }
+```
 
+## Application
+
+1. [Offline Reverse Processing](https://codeforces.com/edu/course/2/lesson/7/1/practice/contest/289390/problem/D)
